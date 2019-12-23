@@ -8,7 +8,9 @@ Finally, you should test the sample codes of SGX.
 ### Prerequisites:
 $ sudo apt update  
 $ sudo apt -y dist-upgrade   
-$ sudo apt -y install git build-essential ocaml automake autoconf libtool wget python libssl-dev libcurl4-openssl-dev protobuf-compiler libprotobuf-dev debhelpher cmake    
+$ sudo apt -y install git build-essential ocaml automake autoconf 
+$ sudo apt -y install libtool wget python libssl-dev libcurl4-openssl-dev 
+$ sudo apt -y install protobuf-compiler libprotobuf-dev cmake    
   
 $ sudo git clone https://github.com/intel/linux-sgx-driver  
 $ sudo git clone https://github.com/intel/linux-sgx  
@@ -17,8 +19,9 @@ $ sudo git clone https://github.com/intel/sgx-ra-sample
 
 ### Install the Intel SGX Driver
 $ cd linux-sgx-driver  
-$ dkpg-query -s linux-headers-$(uname -r)  
+$ dpkg-query -s linux-headers-$(uname -r)  
 $ sudo apt-get install linux-headers-$(uname -r)  
+$ sudo make
 $ sudo mkdir -p "/lib/modules/"`uname -r`"/kernel/drivers/intel/sgx"  
 $ sudo cp isgx.ko "/lib/modules/"`uname -r`"/kernel/drivers/intel/sgx"  
 $ sudo sh -c "cat /etc/modules | grep -Fxq isgx || echo isgx >> /etc/modules"  
@@ -27,25 +30,26 @@ $ sudo /sbin/modprobe isgx
 
 ### Install the Intel SGX SDK
 $ cd ../linux-sgx  
-$ ./download_prebuilt.sh  
-$ make sdk  
-$ make sdk_install_pkg  
-$ make deb_pkg  
+$ sudo ./download_prebuilt.sh  
+$ sudo make sdk  
+$ sudo make sdk_install_pkg  
 $ cd linux/installer/bin  
-$ ./sgx_linux_x64_sdk_${version}.bin  
-$ cp -r ./sgxsdk /opt/intel/sgxsdk  
+$ sudo ./sgx_linux_x64_sdk_${version}.bin  
+$ sudo mkdir /opt/intel/
+$ sudo cp -r ./sgxsdk /opt/intel/sgxsdk  
 $ cd ../../../  
+$ sudo make deb_pkg  
 
 ### Install the Intel SGX PSW
-$ make psw  
+$ sudo make psw  
 $ cd linux/installer/deb  
 $ sudo dpkg -i ./libsgx-urts_$(version}-${revision}_amd64.deb ./libsgx-enclave-common_${version}-${revision}_amd64.deb  
 $ cd ../../../  
 
 ### Test the sample codes
 $ cd linux/installer/bin/sgxsdk/SampleCode/SampleEnclave  
-$ make  
+$ sudo make  
 $ ./app  
 $ cd ../RemoteAttestation  
-$ make  
+$ sudo make  
 $ ./app  
