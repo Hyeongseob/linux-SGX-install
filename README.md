@@ -74,8 +74,8 @@ IAS_REPORT_SIGNING_CA_FILE=./../linux-SGX-install/Intel_SGX_Attestation_RootCA.p
 ~  
 VERBOSE=1  
 ~  
-$ wget https://www.openssl.org/source/openssl-1.1.0i.tar.gz  
-$ tar xf openssl-1.1.0i.tar.gz  
+$ sudo wget https://www.openssl.org/source/openssl-1.1.0i.tar.gz  
+$ sudo tar xf openssl-1.1.0i.tar.gz  
 $ cd openssl-1.1.0i  
 $ sudo ./config --prefix=/opt/openssl/1.1.0i --openssldir=/opt/openssl/1.1.0i  
 $ sudo make  
