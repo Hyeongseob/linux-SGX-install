@@ -6,8 +6,9 @@ They recommend the order of installation, that is SGX driver, SGX SDK and PSW.
 Finally, you should test the sample codes of SGX.
 
 Prerequisites:
-
-$ sudo apt-get install git build-essential ocaml automake autoconf libtool wget python libssl-dev libcurl4-openssl-dev protobuf-compiler libprotobuf-dev debhelpher cmake  
+$ sudo apt update
+$ sudo apt -y dist-upgrade 
+$ sudo apt -y install git build-essential ocaml automake autoconf libtool wget python libssl-dev libcurl4-openssl-dev protobuf-compiler libprotobuf-dev debhelpher cmake  
 
 $ sudo git clone https://github.com/intel/linux-sgx-driver  
 $ sudo git clone https://github.com/intel/linux-sgx  
