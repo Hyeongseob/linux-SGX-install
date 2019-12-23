@@ -15,9 +15,9 @@ $ sudo git clone https://github.com/intel/sgx-ra-sample
 
 
 ### Install the Intel SGX Driver
-$ cd linux-sgx-driver
-$ dkpg-query -s linux-headers-$(uname -r)
-$ sudo apt-get install linux-headers-$(uname -r)
+$ cd linux-sgx-driver 
+$ dkpg-query -s linux-headers-$(uname -r) 
+$ sudo apt-get install linux-headers-$(uname -r) 
 $ sudo mkdir -p "/lib/modules/"`uname -r`"/kernel/drivers/intel/sgx"
 $ sudo cp isgx.ko "/lib/modules/"`uname -r`"/kernel/drivers/intel/sgx"
 $ sudo sh -c "cat /etc/modules | grep -Fxq isgx || echo isgx >> /etc/modules"
