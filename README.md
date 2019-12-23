@@ -27,24 +27,24 @@ $ sudo /sbin/modprobe isgx
 ### Install the Intel SGX SDK
 $ cd ../linux-sgx  
 $ ./download_prebuilt.sh  
-$ make sdk
-$ make sdk_install_pkg
-$ make deb_pkg
-$ cd linux/installer/bin
-$ ./sgx_linux_x64_sdk_${version}.bin
-$ cp -r ./sgxsdk /opt/intel/sgxsdk
-$ cd ../../../
+$ make sdk  
+$ make sdk_install_pkg  
+$ make deb_pkg  
+$ cd linux/installer/bin  
+$ ./sgx_linux_x64_sdk_${version}.bin  
+$ cp -r ./sgxsdk /opt/intel/sgxsdk  
+$ cd ../../../  
 
 ### Install the Intel SGX PSW
-$ make psw
-$ cd linux/installer/deb
-$ sudo dpkg -i ./libsgx-urts_$(version}-${revision}_amd64.deb ./libsgx-enclave-common_${version}-${revision}_amd64.deb
-$ cd ../../../
+$ make psw  
+$ cd linux/installer/deb  
+$ sudo dpkg -i ./libsgx-urts_$(version}-${revision}_amd64.deb ./libsgx-enclave-common_${version}-${revision}_amd64.deb  
+$ cd ../../../  
 
 ### Test the sample codes
-$ cd linux/installer/bin/sgxsdk/SampleCode/SampleEnclave
-$ make
-$ ./app
-$ cd ../RemoteAttestation
-$ make
-$ ./app
+$ cd linux/installer/bin/sgxsdk/SampleCode/SampleEnclave  
+$ make  
+$ ./app  
+$ cd ../RemoteAttestation  
+$ make  
+$ ./app  
