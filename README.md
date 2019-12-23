@@ -87,8 +87,8 @@ $ cd sgx-ra-sample
 $ sudo ./run-client  
 
 ### Others
-If you want to subscribe the SGX SERVICES, visit https://api.portal.trustedservices.intel.com/EPID-attestation
-Progress of Remote Attestation is described on https://software.intel.com/en-us/sgx/attestation-services
-https://software.intel.com/en-us/articles/code-sample-intel-software-guard-extensions-remote-attestation-end-to-end-example
-About the guide of Windows 10 installation on https://software.intel.com/en-us/sgx/sdk
-You can look the website for develop the enclave https://software.intel.com/en-us/articles/intel-sgx-web-based-training
+If you want to subscribe the SGX SERVICES, visit https://api.portal.trustedservices.intel.com/EPID-attestation  
+Progress of Remote Attestation is described on https://software.intel.com/en-us/sgx/attestation-services  
+https://software.intel.com/en-us/articles/code-sample-intel-software-guard-extensions-remote-attestation-end-to-end-example  
+About the guide of Windows 10 installation on https://software.intel.com/en-us/sgx/sdk  
+You can look the website for develop the enclave https://software.intel.com/en-us/articles/intel-sgx-web-based-training  
