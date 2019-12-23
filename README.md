@@ -5,7 +5,11 @@ This follows the guide from the Intel documents of SGX SDK installation.
 They recommend the order of installation, that is SGX driver, SGX SDK and PSW.
 Finally, you should test the sample codes of SGX.
 
-### Prerequisites:
+### Setting
+Intel core i5-9600K
+ASRock Z390 PRO4
+
+### Prerequisites
 $ sudo apt update  
 $ sudo apt -y dist-upgrade  
 $ sudo apt -y install git build-essential ocaml automake autoconf  
@@ -16,7 +20,6 @@ $ sudo git clone https://github.com/Hyeongseob/linux-SGX-install
 $ sudo git clone https://github.com/intel/linux-sgx-driver  
 $ sudo git clone https://github.com/intel/linux-sgx  
 $ sudo git clone https://github.com/intel/sgx-ra-sample  
-
 
 ### Install the Intel SGX Driver
 $ cd linux-sgx-driver  
