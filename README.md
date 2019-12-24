@@ -5,9 +5,9 @@ This follows the guide from the Intel documents of SGX SDK installation.
 They recommend the order of installation, that is SGX driver, SGX SDK and PSW.  
 Finally, you should test the sample codes of SGX.  
 
-### Setting
-Intel core i5-9600K  
-ASRock Z390 PRO4  
+### My environments
+Intel core i5-9600K (CPU supports the SGX services)  
+ASRock Z390 PRO4 (This mainboard is recommanded officially)  
 
 ### Prerequisites
 $ sudo apt update  
@@ -60,6 +60,9 @@ $ sudo make
 $ ./app  
 
 ### Remote attestation sample code
+The SPID and subscription keys are my own information (Hyeongseob Kim).
+Therefore it is temporary and you shuold issue your own information from the intel websites.
+
 $ cd  
 $ cd sgx-ra-sample  
 $ sudo gedit settings  
