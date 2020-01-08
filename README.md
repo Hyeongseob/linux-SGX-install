@@ -87,13 +87,13 @@ $ ./config --prefix=/opt/openssl/1.1.0i --openssldir=/opt/openssl/1.1.0i
 $ make  
 $ sudo make install  
 $ cd ../  
-$ sudo ./bootstrap  
-$ sudo ./configure --with-openssldir=/opt/openssl/1.1.0i  
-$ sudo make  
-$ sudo ./run-server  
+$ ./bootstrap  
+$ ./configure --with-openssldir=/opt/openssl/1.1.0i  
+$ make  
+$ ./run-server  
 (other terminal windows)  
 $ cd sgx-ra-sample
-$ sudo ./run-client  
+$ ./run-client  
 
 ### Others
 If you want to subscribe the SGX SERVICES, visit https://api.portal.trustedservices.intel.com/EPID-attestation  
