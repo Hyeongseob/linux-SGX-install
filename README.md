@@ -75,6 +75,7 @@ IAS_PRIMARY_SUBSCRIPTION_KEY=0ac85af841814d19b80365c75a01b50e
 IAS_SECONDARY_SUBSCRIPTION_KEY=f4d39a7ac7b542fd8f67b71dc1428297  
 ~  
 IAS_REPORT_SIGNING_CA_FILE=./../linux-SGX-install/Intel_SGX_Attestation_RootCA.pem  
+(This CA FILE is on the linux-sgx-install folder)
 ~  
 VERBOSE=1  
 ~  
