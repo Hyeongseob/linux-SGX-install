@@ -1,4 +1,5 @@
 # linux-SGX-install
+This is written by Hyeongseob Kim.
 For Ubuntu 16.04 LTS Desktop 64bits, Intel SGX installation guide repository.  
 
 This follows the guide from the Intel documents of SGX SDK installation.  
@@ -24,8 +25,8 @@ $ git clone https://github.com/intel/sgx-ra-sample
 ### Install the Intel SGX Driver
 $ cd linux-sgx-driver  
 $ dpkg-query -s linux-headers-$(uname -r)  
-$ sudo apt-get install linux-headers-$(uname -r)  
-$ sudo make  
+$ sudo apt install linux-headers-$(uname -r)  
+$ make  
 $ sudo mkdir -p "/lib/modules/"`uname -r`"/kernel/drivers/intel/sgx"  
 $ sudo cp isgx.ko "/lib/modules/"`uname -r`"/kernel/drivers/intel/sgx"  
 $ sudo sh -c "cat /etc/modules | grep -Fxq isgx || echo isgx >> /etc/modules"  
@@ -34,9 +35,9 @@ $ sudo /sbin/modprobe isgx
 
 ### Install the Intel SGX SDK
 $ cd ../linux-sgx  
-$ sudo ./download_prebuilt.sh  
-$ sudo make sdk  
-$ sudo make sdk_install_pkg  
+$ ./download_prebuilt.sh  
+$ make sdk  
+$ make sdk_install_pkg  
 $ cd linux/installer/bin  
 $ sudo ./sgx_linux_x64_sdk_${version}.bin  
 $ source ~~ (copy&paste upper terminal line)  
