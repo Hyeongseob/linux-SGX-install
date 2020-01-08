@@ -80,11 +80,11 @@ VERBOSE=1
 ~  
 DEBUG=1  
 ~  
-$ sudo wget https://www.openssl.org/source/openssl-1.1.0i.tar.gz  
-$ sudo tar xf openssl-1.1.0i.tar.gz  
+$ wget https://www.openssl.org/source/openssl-1.1.0i.tar.gz  
+$ tar xf openssl-1.1.0i.tar.gz  
 $ cd openssl-1.1.0i  
-$ sudo ./config --prefix=/opt/openssl/1.1.0i --openssldir=/opt/openssl/1.1.0i  
-$ sudo make  
+$ ./config --prefix=/opt/openssl/1.1.0i --openssldir=/opt/openssl/1.1.0i  
+$ make  
 $ sudo make install  
 $ cd ../  
 $ sudo ./bootstrap  
