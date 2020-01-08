@@ -39,15 +39,15 @@ $ ./download_prebuilt.sh
 $ make sdk  
 $ make sdk_install_pkg  
 $ cd linux/installer/bin  
-$ sudo ./sgx_linux_x64_sdk_${version}.bin  
+$ ./sgx_linux_x64_sdk_${version}.bin  
 $ source ~~ (copy&paste upper terminal line)  
 $ sudo mkdir /opt/intel/  
 $ sudo cp -r ./sgxsdk /opt/intel/sgxsdk  
 $ cd ../../../  
-$ sudo make deb_pkg  
+$ make deb_pkg  
 
 ### Install the Intel SGX PSW
-$ sudo make psw  
+$ make psw  
 $ cd linux/installer/deb  
 $ sudo dpkg -i ./libsgx-urts_$(version}-${revision}_amd64.deb ./libsgx-enclave-common_${version}-${revision}_amd64.deb  
 $ cd ../../../  
@@ -77,6 +77,8 @@ IAS_SECONDARY_SUBSCRIPTION_KEY=f4d39a7ac7b542fd8f67b71dc1428297
 IAS_REPORT_SIGNING_CA_FILE=./../linux-SGX-install/Intel_SGX_Attestation_RootCA.pem  
 ~  
 VERBOSE=1  
+~  
+DEBUG=1  
 ~  
 $ sudo wget https://www.openssl.org/source/openssl-1.1.0i.tar.gz  
 $ sudo tar xf openssl-1.1.0i.tar.gz  
