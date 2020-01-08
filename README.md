@@ -16,10 +16,10 @@ $ sudo apt -y install git build-essential ocaml automake autoconf
 $ sudo apt -y install libtool wget python libssl-dev libcurl4-openssl-dev  
 $ sudo apt -y install protobuf-compiler libprotobuf-dev debhelper cmake  
 
-$ sudo git clone https://github.com/Hyeongseob/linux-SGX-install  
-$ sudo git clone https://github.com/intel/linux-sgx-driver  
-$ sudo git clone https://github.com/intel/linux-sgx  
-$ sudo git clone https://github.com/intel/sgx-ra-sample  
+$ git clone https://github.com/Hyeongseob/linux-SGX-install  
+$ git clone https://github.com/intel/linux-sgx-driver  
+$ git clone https://github.com/intel/linux-sgx  
+$ git clone https://github.com/intel/sgx-ra-sample  
 
 ### Install the Intel SGX Driver
 $ cd linux-sgx-driver  
