@@ -54,10 +54,10 @@ $ cd ../../../
 
 ### Test the sample codes
 $ cd linux/installer/bin/sgxsdk/SampleCode/SampleEnclave  
-$ sudo make  
+$ make  
 $ ./app  
 $ cd ../RemoteAttestation  
-$ sudo make  
+$ make  
 $ ./app  
 
 ### Remote attestation sample code
